@@ -2,14 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "AppleWhiteDot.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "AppleWhiteDot2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "AppleWhiteDot3x.png",
       "scale" : "3x"
     }
   ],

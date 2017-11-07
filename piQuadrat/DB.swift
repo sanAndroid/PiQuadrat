@@ -21,9 +21,10 @@ public class DB{
     public static var lehrerID : Int = -1
     public static var schuelerID : Int = -1
     public static var kursID : Int = -1
+    public static var videoID : Int = -1
     public static var kursBezeichnung : String = ""
     public static var videoURL: String = "empty"
-
+    public static var accountName : String = ""
     
     // Call this function with function Name as first parameter and the function's parameter as the subsequent parameters
     // Completion determines what to do with result

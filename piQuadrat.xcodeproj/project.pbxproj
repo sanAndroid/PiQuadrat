@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		20BCE215AB5B4FA07B267D77 /* Pods_piQuadratTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52431A135B251566DD034681 /* Pods_piQuadratTests.framework */; };
 		BF53D595FE0263B696167C78 /* Pods_piQuadrat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717CF4C4DED6BEB7B26DA278 /* Pods_piQuadrat.framework */; };
+		E601E0661FA8EB3D009BBB69 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E601E0651FA8EB3D009BBB69 /* FilmTableViewCell.swift */; };
+		E601E0681FA90A71009BBB69 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E601E0671FA90A70009BBB69 /* CourseTableViewCell.swift */; };
 		E605033B1F38C1D100AE1200 /* MyCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */; };
 		E605033D1F3A100500AE1200 /* EinKursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */; };
 		E614719A1F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */; };
@@ -23,7 +25,9 @@
 		E620F3801F2A108100030E04 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E620F37F1F2A108100030E04 /* DB.swift */; };
 		E620F3821F2A166B00030E04 /* JsonDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E620F3811F2A166B00030E04 /* JsonDB.swift */; };
 		E6269A7E1F323E980098E446 /* classListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6269A7D1F323E980098E446 /* classListViewController.swift */; };
-		E6269A801F334B780098E446 /* KlasseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6269A7F1F334B780098E446 /* KlasseTableViewCell.swift */; };
+		E65449A51F90B1CF0034A8AD /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65449A41F90B1CF0034A8AD /* FeedbackViewController.swift */; };
+		E65449A71F90F1EF0034A8AD /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65449A61F90F1EF0034A8AD /* KeychainConfiguration.swift */; };
+		E65449A91F90F8160034A8AD /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */; };
 		E680C2E81F376D830044AE1E /* Klasse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E680C2E71F376D830044AE1E /* Klasse.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,8 @@
 		52431A135B251566DD034681 /* Pods_piQuadratTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_piQuadratTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		717CF4C4DED6BEB7B26DA278 /* Pods_piQuadrat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_piQuadrat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC3BB05501CA4BB988BEBB2 /* Pods-piQuadratTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piQuadratTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-piQuadratTests/Pods-piQuadratTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E601E0651FA8EB3D009BBB69 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		E601E0671FA90A70009BBB69 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseTableViewCell.swift; path = /Users/pablinko/Documents/XCode/PiQuadrat/piQuadrat/piQuadrat/CourseTableViewCell.swift; sourceTree = "<absolute>"; };
 		E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoursesTableViewController.swift; sourceTree = "<group>"; };
 		E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EinKursTableViewController.swift; sourceTree = "<group>"; };
 		E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRegistrationKeyViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +66,9 @@
 		E620F37F1F2A108100030E04 /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		E620F3811F2A166B00030E04 /* JsonDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDB.swift; sourceTree = "<group>"; };
 		E6269A7D1F323E980098E446 /* classListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classListViewController.swift; sourceTree = "<group>"; };
-		E6269A7F1F334B780098E446 /* KlasseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlasseTableViewCell.swift; sourceTree = "<group>"; };
+		E65449A41F90B1CF0034A8AD /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		E65449A61F90F1EF0034A8AD /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
+		E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		E680C2E71F376D830044AE1E /* Klasse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Klasse.swift; sourceTree = "<group>"; };
 		E68DD1911F42188100C4E362 /* PiQuadrat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PiQuadrat-Bridging-Header.h"; sourceTree = "<group>"; };
 		E6CCD41E1F3D9A6D00356609 /* piQuadrat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piQuadrat.entitlements; sourceTree = "<group>"; };
@@ -131,20 +139,24 @@
 		E620F3581F28C2CA00030E04 /* piQuadrat */ = {
 			isa = PBXGroup;
 			children = (
+				E601E0671FA90A70009BBB69 /* CourseTableViewCell.swift */,
+				E601E0651FA8EB3D009BBB69 /* FilmTableViewCell.swift */,
+				E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */,
+				E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */,
+				E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */,
+				E65449A61F90F1EF0034A8AD /* KeychainConfiguration.swift */,
 				E620F3791F28C4CC00030E04 /* LoginScreen.swift */,
+				E65449A41F90B1CF0034A8AD /* FeedbackViewController.swift */,
 				E620F37D1F2A075600030E04 /* ErstelleNeuenSchuelerAccount.swift */,
 				E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */,
-				E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */,
-				E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */,
+				E620F35D1F28C2CB00030E04 /* Main.storyboard */,
 				E6CCD41E1F3D9A6D00356609 /* piQuadrat.entitlements */,
 				E6269A7D1F323E980098E446 /* classListViewController.swift */,
 				E680C2E71F376D830044AE1E /* Klasse.swift */,
 				E620F37B1F2A044D00030E04 /* gewaehltesThemaViewController.swift */,
 				E620F3591F28C2CA00030E04 /* AppDelegate.swift */,
-				E620F35D1F28C2CB00030E04 /* Main.storyboard */,
 				E620F37F1F2A108100030E04 /* DB.swift */,
 				E620F3811F2A166B00030E04 /* JsonDB.swift */,
-				E6269A7F1F334B780098E446 /* KlasseTableViewCell.swift */,
 				E620F3601F28C2CB00030E04 /* Assets.xcassets */,
 				E620F3621F28C2CB00030E04 /* LaunchScreen.storyboard */,
 				E620F3651F28C2CB00030E04 /* Info.plist */,
@@ -222,13 +234,13 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
 					E620F3691F28C2CC00030E04 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4YB2CYQJS8;
+						DevelopmentTeam = 25W52HY24B;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E620F3551F28C2CA00030E04;
 					};
@@ -376,11 +388,15 @@
 				E680C2E81F376D830044AE1E /* Klasse.swift in Sources */,
 				E605033B1F38C1D100AE1200 /* MyCoursesTableViewController.swift in Sources */,
 				E620F3821F2A166B00030E04 /* JsonDB.swift in Sources */,
-				E6269A801F334B780098E446 /* KlasseTableViewCell.swift in Sources */,
+				E65449A91F90F8160034A8AD /* KeychainPasswordItem.swift in Sources */,
 				E620F35A1F28C2CA00030E04 /* AppDelegate.swift in Sources */,
 				E6269A7E1F323E980098E446 /* classListViewController.swift in Sources */,
+				E601E0681FA90A71009BBB69 /* CourseTableViewCell.swift in Sources */,
 				E614719A1F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift in Sources */,
+				E601E0661FA8EB3D009BBB69 /* FilmTableViewCell.swift in Sources */,
 				E620F37A1F28C4CC00030E04 /* LoginScreen.swift in Sources */,
+				E65449A71F90F1EF0034A8AD /* KeychainConfiguration.swift in Sources */,
+				E65449A51F90B1CF0034A8AD /* FeedbackViewController.swift in Sources */,
 				E620F3801F2A108100030E04 /* DB.swift in Sources */,
 				E620F37C1F2A044D00030E04 /* gewaehltesThemaViewController.swift in Sources */,
 			);
@@ -427,6 +443,7 @@
 		E620F3711F28C2CC00030E04 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -434,7 +451,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -442,7 +461,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -471,6 +494,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -478,6 +502,7 @@
 		E620F3721F28C2CC00030E04 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -485,7 +510,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -493,7 +520,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -515,6 +546,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -526,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_ENTITLEMENTS = piQuadrat/piQuadrat.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = piQuadrat/Info.plist;
@@ -547,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_ENTITLEMENTS = piQuadrat/piQuadrat.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = piQuadrat/Info.plist;
@@ -566,9 +600,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFC3BB05501CA4BB988BEBB2 /* Pods-piQuadratTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 4YB2CYQJS8;
+				DEVELOPMENT_TEAM = 25W52HY24B;
 				INFOPLIST_FILE = piQuadratTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PiQuadrat.piQuadratTests;
@@ -582,9 +616,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 377F3C950401168FB209E48B /* Pods-piQuadratTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 4YB2CYQJS8;
+				DEVELOPMENT_TEAM = 25W52HY24B;
 				INFOPLIST_FILE = piQuadratTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PiQuadrat.piQuadratTests;
