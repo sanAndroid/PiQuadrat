@@ -4,14 +4,13 @@
 //
 //  Created by pau on 11/12/17.
 //  Copyright © 2017 pau. All rights reserved.
-//
+//  This ViewController appears directly after the FeedbackViewController
+//  The User can set his level of understanding which will be shown in EinKursTableView
 
 import UIKit
 
-    var currentImage = 0
-
 class UnterstoodViewController: UIViewController {
-
+    var currentImage = 0
     @IBOutlet weak var thumb: UIImageView!
     @IBOutlet weak var okButton: UIButton!
     

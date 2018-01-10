@@ -5,6 +5,7 @@
 //  Created by pau on 8/7/17.
 //  Copyright © 2017 pau. All rights reserved.
 //
+// Shows the Courses of a student, up to now we usually have only one course
 
 import UIKit
 
@@ -39,7 +40,7 @@ class MyCoursesTableViewController: UITableViewController {
             if let kurseJSON = dataJSON as? [[String : String ]]{
                 OperationQueue.main.addOperation{
 
-                for (index, kurs) in kurseJSON.enumerated() {
+                for (_, kurs) in kurseJSON.enumerated() {
                     //self.kurse.append(kurs["ID"]!)
                     self.kurse.append(kurs["Bezeichnung"]!)
                     self.kurseID.append(Int(kurs["ID"]!)!)
@@ -70,7 +71,7 @@ class MyCoursesTableViewController: UITableViewController {
                 fatalError("Could not delete Password - \(error)")
             }
         }
-        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreenVC") as! LoginScreen
+        //let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreenVC") as! LoginScreen
         //self.navigationController?.setNavigationBarHidden( true, animated: false)
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         //self.navigationController?.pushViewController(loginVC, animated: true)

@@ -45,18 +45,18 @@ class EinKursTableViewController: UITableViewController{
         self.navigationItem.title = String(DB.kursBezeichnung)
         currentRow = -1
         callFeedback = false;
+        // Get all videos from the database
         let params : [String] = ["gibVideosVomKurs",String(DB.kursID)];
         let request = DB.createRequest(params: params)
         DB.asyncCall(requestJSON: "Videos", request: request, comp: loadVideos)
         print("EinKursTableViewController did Load")
-        
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
+        // Check if video has been seen for the first time and load the feedback controllers if that's the case
         if(callUnderstanding){
-            print("Call Segue to Understandin")
+            //print("Call Segue to Understandin")
             let feedbackVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UnterstoodViewController") as! UnterstoodViewController
             self.navigationController?.pushViewController(feedbackVC, animated: false)
             //self.present( feedbackVC, animated: true, completion:nil )
@@ -64,17 +64,18 @@ class EinKursTableViewController: UITableViewController{
         }
         
         if(callFeedback){
-            print("Call Segue to Bewertung")
+            //print("Call Segue to Bewertung")
            let feedbackVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FeedbackViewController") as! FeedbackViewController
             self.navigationController?.pushViewController(feedbackVC, animated: false)
             //self.present( feedbackVC, animated: true, completion:nil )
             callFeedback = false
         }
+        //Reload data with new Feedback
         self.filmTableView.reloadData()
         self.adjustBewertung()
         //self.hasStudentSeen()
     }
-    
+    // Get the Videos from the Database and populate the tableViewController
     public func loadVideos(dataJSON: [[String : Any ]])  {
         print("dataJSON.count")
         print(dataJSON.count)
@@ -90,7 +91,7 @@ class EinKursTableViewController: UITableViewController{
             OperationQueue.main.addOperation{
                 for (index, video) in dataJSON.enumerated() {
                     let videoId = video["ID"] as! String
-                    // Hier war ein Check ob das Video freigeschaltet wurde
+                    // Here I used to check if the video was unlocked
                     let paramsSeen : [String] = ["hatSchuelerVideoGesehen",  String(DB.schuelerID), videoId ,String(0)];
                     let requestSeen = DB.createRequest(params: paramsSeen)
                     DB.asyncCallforString(request: requestSeen, comp:  { (seen: String) -> () in
@@ -101,6 +102,7 @@ class EinKursTableViewController: UITableViewController{
                             print("Belege den Interaktiven Pfad")
                             interPfad  = video["PfadInteraktiv"] as! String
                         }
+                        // Change this to unwrap safely
                         self.videoDataArray.append(VideoData(beschreibung: video["Beschreibung"]! as! String, geloescht: Int(video["Geloescht"]! as! String)!, gewichtung: Int(video["Gewichtung"]! as! String)!, iD: Int(video["ID"]! as! String)!, pfad: String("http://gymbase.net/MatheApp/"+(video["Pfad"]! as! String))!, schwierigkeit: Int(video["Schwierigkeit"]! as! String)!, titel: video["Titel"]! as! String, interaktiverPfad : interPfad , gesehen : true, verstanden : 0))
                         print(index)
                         print(dataJSON.count)
@@ -108,7 +110,6 @@ class EinKursTableViewController: UITableViewController{
                             self.videoDataArray.sort { (lhs: VideoData, rhs: VideoData) in
                                 return lhs.schwierigkeit < rhs.schwierigkeit
                             }
-                            //print("Here Comes Reload Data")
                             DispatchQueue.main.async{
                                 print("Here Comes Reload Data")
                                 // Refresh the TableView and load extra Data
@@ -123,8 +124,7 @@ class EinKursTableViewController: UITableViewController{
         }
     }
    
-        
-    //func adjustBewertung(videoIndex : IndexPath){
+    // Set the new User Rating
     func adjustBewertung(){
         // get param0 --> VideoID
         // get param1 --> SchuelerID
@@ -156,7 +156,7 @@ class EinKursTableViewController: UITableViewController{
         })
         }
     }
-    
+ // Check if the Student has seen the video and update the videoDataArray
         func hasStudentSeen(){
             // get param0 --> SchuelerID
             // get param1 --> VideoID

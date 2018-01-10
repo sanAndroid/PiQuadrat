@@ -3,7 +3,7 @@
 //  
 //
 //  Created by pau on 11/7/17.
-//
+//  Thiv VC displays h5p videos in WebViews
 
 import UIKit
 import WebKit

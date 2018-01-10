@@ -5,6 +5,7 @@
 //  Created by pau on 10/31/17.
 //  Copyright © 2017 pau. All rights reserved.
 //
+// The TableViewCell to display one Film
 
 import UIKit
 

@@ -4,7 +4,7 @@
 //
 //  Created by pau on 10/13/17.
 //  Copyright © 2017 pau. All rights reserved.
-//
+//  Shows Rating items to the user
 
 import UIKit
 import Cosmos

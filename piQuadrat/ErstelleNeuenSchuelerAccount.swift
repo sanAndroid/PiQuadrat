@@ -5,6 +5,7 @@
 //  Created by pau on 7/27/17.
 //  Copyright © 2017 pau. All rights reserved.
 //
+//  This VC is called when a new student accound is created
 
 import UIKit
 

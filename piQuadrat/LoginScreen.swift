@@ -5,7 +5,7 @@
 //  Created by pau on 7/26/17.
 //  Copyright © 2017 pau. All rights reserved.
 //
-
+//  LoginScreen, manages login and credentials etc.
 import UIKit
 
 class LoginScreen: UIViewController {
@@ -24,19 +24,19 @@ class LoginScreen: UIViewController {
         if let accountType = UserDefaults.standard.string(forKey: "AccountType"){
             switch accountType {
             case "StudentAccount":
-                    let studentUID = UserDefaults.standard.string(forKey: "StudentUID")!
-                    let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: studentUID, accessGroup: KeychainConfiguration.accessGroup)
-                    let pw = try passwordItem.readPassword()
-                    let params  = ["einloggenSchueler", studentUID, pw];
-                    let request = DB.createRequest(params: params)
-                    DB.asyncCall(requestJSON: "Schueler", request: request, comp: schuelerEingeloggt)
+                let studentUID = UserDefaults.standard.string(forKey: "StudentUID")!
+                let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: studentUID, accessGroup: KeychainConfiguration.accessGroup)
+                let pw = try passwordItem.readPassword()
+                let params  = ["einloggenSchueler", studentUID, pw];
+                let request = DB.createRequest(params: params)
+                DB.asyncCall(requestJSON: "Schueler", request: request, comp: schuelerEingeloggt)
             case "TeacherAccount":
                 let teacherUID = UserDefaults.standard.string(forKey: "TeacherUID")!
                 let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: teacherUID, accessGroup: KeychainConfiguration.accessGroup)
                 let pw = try passwordItem.readPassword()
                 let params  = ["einloggenLehrer", teacherUID , pw];
                 let request = DB.createRequest(params: params)
-                DB.asyncCall(requestJSON: "Lehrer", request: request, comp: lehrerEingeloggt)
+                DB.asyncCall(requestJSON: "Lehrer", request: request, comp: teacherLoggedIn)
             default:
                 print("No credentials found")
             }
@@ -51,29 +51,7 @@ class LoginScreen: UIViewController {
             pwd.text = ""
             uid.text = ""
     }
-/*
-     @IBAction func deleteCredentials(_ sender: Any) {
 
-        print("deleteCredentials")
-        if DB.accountName != "" {
-            do{
-            let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: DB.accountName, accessGroup: KeychainConfiguration.accessGroup)
-            try passwordItem.deleteItem()
-            DB.accountName = ""
-            DB.lehrerID = -1
-            DB.schuelerID = -1
-
-            UserDefaults.standard.set("", forKey: "AccountType")
-            UserDefaults.standard.set("", forKey: "StudentUID")
-            UserDefaults.standard.set("", forKey: "TeacherUID")
-            } catch{
-                fatalError("Could not delete Password - \(error)")
-            }
-            
-        }
-        
-    }
-  */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -88,11 +66,11 @@ class LoginScreen: UIViewController {
         DB.accountName = uid.text!
         let request = DB.createRequest(params: params)
         // Checks if it is a valid teacher Account, if not call schuelerEingeloggt
-        DB.asyncCall(requestJSON: "Lehrer", request: request, comp: lehrerEingeloggt)
+        DB.asyncCall(requestJSON: "Lehrer", request: request, comp: teacherLoggedIn)
 
     }
     
-    public func lehrerEingeloggt(dataJSON: [[String: Any]])  {
+    public func teacherLoggedIn(dataJSON: [[String: Any]])  {
         print(dataJSON.count)
         if(dataJSON.count==0){
             print("Lehrer Array ist 0")
@@ -174,18 +152,9 @@ class LoginScreen: UIViewController {
  
     
     
-    
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
     
     
     func showToast(message : String) {
