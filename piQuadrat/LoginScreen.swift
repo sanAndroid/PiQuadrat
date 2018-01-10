@@ -11,7 +11,7 @@ import UIKit
 class LoginScreen: UIViewController {
     @IBOutlet weak var pwd: UITextField!
     @IBOutlet weak var uid: UITextField!
-    
+
     static var correctLogin : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,9 @@ class LoginScreen: UIViewController {
             fatalError("Inconsistent Data in Keychain - \(error)")
         }
     }
+    
     override func viewWillAppear(_ animated: Bool) {
+        // Clear password und uid when view is reloaded
             pwd.text = ""
             uid.text = ""
     }
@@ -80,7 +82,6 @@ class LoginScreen: UIViewController {
     
     
     @IBAction func checkLoginData(_ sender: Any) {
-        
         // Check Teacher Account
         let pw : String = "PspQf" + pwd.text! + "M77Vs2";
         let params : [String] = ["einloggenLehrer",uid.text!, md5(string : pw)];
@@ -88,13 +89,11 @@ class LoginScreen: UIViewController {
         let request = DB.createRequest(params: params)
         // Checks if it is a valid teacher Account, if not call schuelerEingeloggt
         DB.asyncCall(requestJSON: "Lehrer", request: request, comp: lehrerEingeloggt)
-        
 
     }
     
     public func lehrerEingeloggt(dataJSON: [[String: Any]])  {
         print(dataJSON.count)
-        let account : String  = uid.text!
         if(dataJSON.count==0){
             print("Lehrer Array ist 0")
             let pw : String = "PspQf" + pwd.text! + "M77Vs2";
@@ -109,7 +108,7 @@ class LoginScreen: UIViewController {
                 UserDefaults.standard.set(DB.accountName, forKey: "TeacherUID")
                 UserDefaults.standard.set("TeacherAccount", forKey: "AccountType")
                 let pw : String = md5(string: "PspQf" + self.pwd.text! + "M77Vs2")
-                let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: account, accessGroup: KeychainConfiguration.accessGroup)
+                let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: DB.accountName, accessGroup: KeychainConfiguration.accessGroup)
                 do {
                     try passwordItem.savePassword(pw)
                     print("Password in Keychain")
@@ -131,7 +130,6 @@ class LoginScreen: UIViewController {
    // Check if it is a valid Student Account
     public func schuelerEingeloggt(dataJSON: [[String: Any]]){
      print("schuelerEinloggen")
-     let account : String  = uid.text!
      if(dataJSON.count==0){
         OperationQueue.main.addOperation{
             let alert = UIAlertController(title: "Fehler", message: "Es konnte kein Account mit diesen Login Daten gefunden werden", preferredStyle: UIAlertControllerStyle.alert)
@@ -153,7 +151,7 @@ class LoginScreen: UIViewController {
                     UserDefaults.standard.set("StudentAccount", forKey: "AccountType")
                     print("Safe Credentials:" + DB.accountName )
                     let pw : String = md5(string: "PspQf" + self.pwd.text! + "M77Vs2")
-                    let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: account, accessGroup: KeychainConfiguration.accessGroup)
+                    let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: DB.accountName, accessGroup: KeychainConfiguration.accessGroup)
                     do {
                         try passwordItem.savePassword(pw)
                         print("Password in Keychain")

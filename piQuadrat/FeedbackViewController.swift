@@ -43,14 +43,17 @@ class FeedbackViewController: UIViewController {
         var request : URLRequest
         for i in 0 ... 3 {
         // func :fuegeBewertungHinzu , param0 --> VideoID, param1 --> SchuelerID, param2 --> BewertungID ,param3 --> Wert
-            params  = ["fuegeBewertungHinzu",String(DB.videoID),String(DB.schuelerID),String(i),String(ratingArray[i])];
+            params  = ["fuegeBewertungHinzu",String(DB.videoID),String(DB.schuelerID),String(i + 1),String(ratingArray[i])];
             request = DB.createRequest(params: params)
             DB.asyncCallforString(request: request, comp: { (reply : (String)) -> () in
             print(reply)
+                OperationQueue.main.addOperation{
+                    self.navigationController?.popViewController(animated: true)
+                }
             })
         }
-        self.navigationController?.popViewController(animated: true)
-        // return String "Eintragen erfolgreich"
+        
+        
     }
     
 }

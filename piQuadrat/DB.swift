@@ -88,15 +88,17 @@ public class DB{
         print(dataBuffer)
         //Adresse der PHP Schnittstelle für die Verbindung zur MySQL Datenbank
         
-        let url = URL(string: "http://gymbase.net/MatheApp/"+aufzurufendeKlasse)!
+        //ALT let url = URL(string: "https://gymbase.net/MatheApp/"+aufzurufendeKlasse)!
+        let url = URL(string: "https://piquadrat.org/h5p-wp/"+aufzurufendeKlasse)!
+        print("URL: ")
         print(url)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = dataBuffer.data(using: String.Encoding.utf8)
-        
         return request
     }
     
+  
     
     // Call this function with function Name as first parameter and the function's parameter as the subsequent parameters
     // Completion determines what to do with result

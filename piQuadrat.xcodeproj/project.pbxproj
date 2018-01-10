@@ -14,6 +14,7 @@
 		E605033B1F38C1D100AE1200 /* MyCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */; };
 		E605033D1F3A100500AE1200 /* EinKursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */; };
 		E614719A1F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */; };
+		E61A4CA41FB2682E007AF356 /* InteraktivesVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61A4CA31FB2682C007AF356 /* InteraktivesVideoViewController.swift */; };
 		E620F35A1F28C2CA00030E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E620F3591F28C2CA00030E04 /* AppDelegate.swift */; };
 		E620F35F1F28C2CB00030E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E620F35D1F28C2CB00030E04 /* Main.storyboard */; };
 		E620F3611F28C2CB00030E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E620F3601F28C2CB00030E04 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		E65449A71F90F1EF0034A8AD /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65449A61F90F1EF0034A8AD /* KeychainConfiguration.swift */; };
 		E65449A91F90F8160034A8AD /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */; };
 		E680C2E81F376D830044AE1E /* Klasse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E680C2E71F376D830044AE1E /* Klasse.swift */; };
+		E6C85D731FB88A34008BDC15 /* UnterstoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C85D721FB88A33008BDC15 /* UnterstoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoursesTableViewController.swift; sourceTree = "<group>"; };
 		E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EinKursTableViewController.swift; sourceTree = "<group>"; };
 		E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRegistrationKeyViewController.swift; sourceTree = "<group>"; };
+		E61A4CA31FB2682C007AF356 /* InteraktivesVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InteraktivesVideoViewController.swift; path = /Users/pablinko/Documents/XCode/PiQuadrat/piQuadrat/piQuadrat/InteraktivesVideoViewController.swift; sourceTree = "<absolute>"; };
 		E620F3561F28C2CA00030E04 /* piQuadrat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piQuadrat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E620F3591F28C2CA00030E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E620F35E1F28C2CB00030E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		E680C2E71F376D830044AE1E /* Klasse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Klasse.swift; sourceTree = "<group>"; };
 		E68DD1911F42188100C4E362 /* PiQuadrat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PiQuadrat-Bridging-Header.h"; sourceTree = "<group>"; };
+		E6C85D721FB88A33008BDC15 /* UnterstoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnterstoodViewController.swift; sourceTree = "<group>"; };
 		E6CCD41E1F3D9A6D00356609 /* piQuadrat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piQuadrat.entitlements; sourceTree = "<group>"; };
 		EF16997DE1B398003EDA25D3 /* Pods-piQuadrat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piQuadrat.release.xcconfig"; path = "Pods/Target Support Files/Pods-piQuadrat/Pods-piQuadrat.release.xcconfig"; sourceTree = "<group>"; };
 		EF864114D31AF46964E8FD35 /* Pods-piQuadrat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piQuadrat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-piQuadrat/Pods-piQuadrat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,14 +143,16 @@
 		E620F3581F28C2CA00030E04 /* piQuadrat */ = {
 			isa = PBXGroup;
 			children = (
+				E6C85D721FB88A33008BDC15 /* UnterstoodViewController.swift */,
+				E65449A41F90B1CF0034A8AD /* FeedbackViewController.swift */,
+				E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */,
+				E61A4CA31FB2682C007AF356 /* InteraktivesVideoViewController.swift */,
 				E601E0671FA90A70009BBB69 /* CourseTableViewCell.swift */,
 				E601E0651FA8EB3D009BBB69 /* FilmTableViewCell.swift */,
-				E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */,
 				E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */,
 				E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */,
 				E65449A61F90F1EF0034A8AD /* KeychainConfiguration.swift */,
 				E620F3791F28C4CC00030E04 /* LoginScreen.swift */,
-				E65449A41F90B1CF0034A8AD /* FeedbackViewController.swift */,
 				E620F37D1F2A075600030E04 /* ErstelleNeuenSchuelerAccount.swift */,
 				E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */,
 				E620F35D1F28C2CB00030E04 /* Main.storyboard */,
@@ -388,6 +394,7 @@
 				E680C2E81F376D830044AE1E /* Klasse.swift in Sources */,
 				E605033B1F38C1D100AE1200 /* MyCoursesTableViewController.swift in Sources */,
 				E620F3821F2A166B00030E04 /* JsonDB.swift in Sources */,
+				E61A4CA41FB2682E007AF356 /* InteraktivesVideoViewController.swift in Sources */,
 				E65449A91F90F8160034A8AD /* KeychainPasswordItem.swift in Sources */,
 				E620F35A1F28C2CA00030E04 /* AppDelegate.swift in Sources */,
 				E6269A7E1F323E980098E446 /* classListViewController.swift in Sources */,
@@ -395,6 +402,7 @@
 				E614719A1F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift in Sources */,
 				E601E0661FA8EB3D009BBB69 /* FilmTableViewCell.swift in Sources */,
 				E620F37A1F28C4CC00030E04 /* LoginScreen.swift in Sources */,
+				E6C85D731FB88A34008BDC15 /* UnterstoodViewController.swift in Sources */,
 				E65449A71F90F1EF0034A8AD /* KeychainConfiguration.swift in Sources */,
 				E65449A51F90B1CF0034A8AD /* FeedbackViewController.swift in Sources */,
 				E620F3801F2A108100030E04 /* DB.swift in Sources */,
@@ -562,7 +570,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = piQuadrat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.com.PiQuadrat.piQuadrat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,7 +592,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = piQuadrat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.com.PiQuadrat.piQuadrat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
