@@ -1,0 +1,41 @@
+   public func loadVideos(dataJSON: [[String : Any ]])  {
+        print("dataJSON.count")
+        print(dataJSON.count)
+        if(dataJSON.count==0){
+            print("Keine Kurse vorhanden")
+            return
+        }else{
+            print("dataJSON")
+             print(dataJSON)
+            if let kurseJSON = dataJSON as? [[String : String ]]{
+               print("BeforeOperationQue")
+                OperationQueue.main.addOperation{
+                    for (index, video) in kurseJSON.enumerated() {
+                            let params : [String] = ["istVideoFuerKursFreigeschaltet",String(DB.kursID),video["ID"]!];
+                            let request = DB.createRequest(params: params)
+                            print("params")
+                            print(params)
+                            DB.asyncCall(requestJSON: "Werte", request: request, comp:  { (permitted : [[String : Any ]] ) -> () in
+                            //DB.asyncCallforString(request: request, comp:  { (permitted : String ) -> () in
+                            print("Freigeschaltet?")
+                            print(permitted  )
+                        })
+                        self.videoDataArray.append(VideoData(beschreibung: video["Beschreibung"]!, geloescht: Int(video["Geloescht"]!)!, gewichtung: Int(video["Gewichtung"]!)!, iD: Int(video["ID"]!)!, pfad: String("http://gymbase.net/MatheApp/"+video["Pfad"]!)!, schwierigkeit: Int(video["Schwierigkeit"]!)!, titel: video["Titel"]!))
+                        //self.videos.append(video["Titel"]!)
+                        //self.videoURL.append("http://gymbase.net/MatheApp/" + video["Pfad"]!)
+                        print("Struct")
+                        print(self.videoDataArray)
+                        self.videoDataArray.sort { (lhs: VideoData, rhs: VideoData) in
+                            return lhs.schwierigkeit < rhs.schwierigkeit
+                        }
+                        
+                    }
+                    print("Here Comes Reload Data")
+                    print(self.videos)
+                    self.filmTableView.reloadData()
+                }
+            }
+            
+        }
+    }
+    

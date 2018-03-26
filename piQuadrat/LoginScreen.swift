@@ -114,7 +114,8 @@ class LoginScreen: UIViewController {
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
-    }}else{ 
+    }
+     }else{
         
         let schuelerJSON = dataJSON.first  // as! [ String : String ]
             OperationQueue.main.addOperation{

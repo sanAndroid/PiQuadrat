@@ -367,33 +367,7 @@ class EinKursTableViewController: UITableViewController{
                 navigator.pushViewController(videoViewController, animated: true)
             }
         }
-        
-
-        // Here the AVPart is starting - Replace with Webview
-        
-        /*let session = AVAudioSession.sharedInstance()
-        do {
-            // Configure the audio session for movie playback
-            try session.setCategory(AVAudioSessionCategoryPlayback,
-                                    mode: AVAudioSessionModeMoviePlayback,
-                                    options: [])
-        } catch let error as NSError {
-            print("Failed to set the audio session category and mode: \(error.localizedDescription)")
-        }
-         */
-        // Load and Display Video
         DB.videoURL=videoDataArray[indexPath.row].pfad
-        
-        /*let url = URL(string : videoDataArray[indexPath.row].pfad)
-        let player = AVPlayer(url: url!)
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        playerViewController.showsPlaybackControls = true
-        self.present(playerViewController, animated: false) {
-           playerViewController.player!.isMuted = false
-           playerViewController.player!.play()
-        }
-     */
     }
     
     /*

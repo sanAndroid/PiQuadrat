@@ -1,0 +1,6 @@
+framework module Pods_piQuadrat {
+  umbrella header "Pods-piQuadrat-umbrella.h"
+
+  export *
+  module * { export * }
+}

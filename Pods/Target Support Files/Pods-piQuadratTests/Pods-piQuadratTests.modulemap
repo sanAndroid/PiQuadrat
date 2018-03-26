@@ -1,0 +1,6 @@
+framework module Pods_piQuadratTests {
+  umbrella header "Pods-piQuadratTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

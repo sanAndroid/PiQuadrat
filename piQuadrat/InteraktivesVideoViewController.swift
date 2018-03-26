@@ -21,11 +21,8 @@ class InteraktivesVideoViewController: UIViewController,  WKUIDelegate, WKNaviga
         webConfiguration.allowsInlineMediaPlayback = true;
         webConfiguration.preferences.javaScriptEnabled = true;
         webConfiguration.allowsPictureInPictureMediaPlayback = true;
-        
         videoWebView = WKWebView(frame: .zero, configuration: webConfiguration)
         videoWebView.uiDelegate = self
-        
-        
         view = videoWebView
     }
     
