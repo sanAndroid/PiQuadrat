@@ -14,20 +14,6 @@ import UIKit
 import AVKit
 import AVFoundation
 
-struct VideoData {
-    var beschreibung : String = ""
-    var geloescht : Int
-    var gewichtung : Int
-    var iD : Int
-    var pfad : String   = "";
-    var schwierigkeit : Int
-    var titel : String = "";
-    var interaktiverPfad = "";
-    var gesehen : Bool;
-    var verstanden : Int
-}
-
-
 class EinKursTableViewController: UITableViewController{
     //var videos = [String]()
     //var videoURL = [String]()
@@ -39,7 +25,19 @@ class EinKursTableViewController: UITableViewController{
     var hasSeenUp2Date = false
     @IBOutlet var filmTableView: UITableView!
     
-    
+    struct VideoData {
+        var beschreibung : String = ""
+        var geloescht : Int
+        var gewichtung : Int
+        var iD : Int
+        var pfad : String   = "";
+        var schwierigkeit : Int
+        var titel : String = "";
+        var interaktiverPfad = "";
+        var gesehen : Bool;
+        var verstanden : Int
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = String(DB.kursBezeichnung)
@@ -57,8 +55,9 @@ class EinKursTableViewController: UITableViewController{
         // Check if video has been seen for the first time and load the feedback controllers if that's the case
         if(callUnderstanding){
             //print("Call Segue to Understandin")
-            let feedbackVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UnterstoodViewController") as! UnterstoodViewController
-            self.navigationController?.pushViewController(feedbackVC, animated: false)
+                // TODO Make this UnderstoodviewControllerAgain
+                    let feedbackVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UnderstoodViewController") as! UnderstoodViewController
+                self.navigationController?.pushViewController(feedbackVC, animated: false)
             //self.present( feedbackVC, animated: true, completion:nil )
             callUnderstanding = false
         }
@@ -88,42 +87,61 @@ class EinKursTableViewController: UITableViewController{
             print("dataJSON")
             print(dataJSON)
             print("BeforeOperationQue")
-            OperationQueue.main.addOperation{
-                for (index, video) in dataJSON.enumerated() {
-                    let videoId = video["ID"] as! String
-                    // Here I used to check if the video was unlocked
-                    let paramsSeen : [String] = ["hatSchuelerVideoGesehen",  String(DB.schuelerID), videoId ,String(0)];
-                    let requestSeen = DB.createRequest(params: paramsSeen)
-                    DB.asyncCallforString(request: requestSeen, comp:  { (seen: String) -> () in
-                        print("VideoAppend - Now in Closure")
-                        print(video)
-                        var interPfad = "empty"
-                        if video["PfadInteraktiv"] is String {
-                            print("Belege den Interaktiven Pfad")
-                            interPfad  = video["PfadInteraktiv"] as! String
-                        }
-                        // Change this to unwrap safely
-                        self.videoDataArray.append(VideoData(beschreibung: video["Beschreibung"]! as! String, geloescht: Int(video["Geloescht"]! as! String)!, gewichtung: Int(video["Gewichtung"]! as! String)!, iD: Int(video["ID"]! as! String)!, pfad: String("http://gymbase.net/MatheApp/"+(video["Pfad"]! as! String))!, schwierigkeit: Int(video["Schwierigkeit"]! as! String)!, titel: video["Titel"]! as! String, interaktiverPfad : interPfad , gesehen : true, verstanden : 0))
-                        print(index)
-                        print(dataJSON.count)
-                        if(index==dataJSON.count-1){
-                            self.videoDataArray.sort { (lhs: VideoData, rhs: VideoData) in
-                                return lhs.schwierigkeit < rhs.schwierigkeit
-                            }
-                            DispatchQueue.main.async{
-                                print("Here Comes Reload Data")
-                                // Refresh the TableView and load extra Data
-                                self.adjustBewertung()
-                                self.hasStudentSeen()
-                                self.filmTableView.reloadData()
-                            }
-                        }
-                    })
-                }
+            // OperationQueue.main.addOperation {
+            for (index, video) in dataJSON.enumerated() {
+                let videoId = video["ID"] as! String
+                // Here I used to check if the video was unlocked
+                let paramsSeen : [String] = ["hatSchuelerVideoGesehen",  String(DB.schuelerID), videoId ,String(0)];
+                let requestSeen = DB.createRequest(params: paramsSeen)
+                DB.asyncCallforString(request: requestSeen, comp: higherOrderHandler(video: video, index: index,dataJSON: dataJSON))
             }
         }
     }
-   
+    
+    
+    func higherOrderHandler(video: [String: Any], index: Int, dataJSON: [[String:Any]]) -> ((String) -> ()) {
+        
+        func videoDownloadHandler(seen: String) -> () {
+            print("VideoAppend - Now in Closure")
+            print(video)
+            var interPfad = "empty"
+            if video["PfadInteraktiv"] is String {
+                print("Belege den Interaktiven Pfad")
+                interPfad  = video["PfadInteraktiv"] as! String
+            }
+            // Change this to unwrap safely
+            let videoData = VideoData(
+                beschreibung: video["Beschreibung"]! as! String,
+                geloescht: Int(video["Geloescht"]! as! String)!,
+                gewichtung: Int(video["Gewichtung"]! as! String)!,
+                iD: Int(video["ID"]! as! String)!,
+                pfad: "http://gymbase.net/MatheApp/" + (video["Pfad"]! as! String),
+                schwierigkeit: Int(video["Schwierigkeit"]! as! String)!,
+                titel: video["Titel"]! as! String,
+                interaktiverPfad : interPfad ,
+                gesehen : true,
+                verstanden : 0
+            )
+            self.videoDataArray.append(videoData)
+            print(index)
+            print(dataJSON.count)
+            if(index==dataJSON.count-1){
+                self.videoDataArray.sort { (lhs: VideoData, rhs: VideoData) in
+                    return lhs.schwierigkeit < rhs.schwierigkeit
+                }
+                DispatchQueue.main.async{
+                    print("Here Comes Reload Data")
+                    // Refresh the TableView and load extra Data
+                    self.adjustBewertung()
+                    self.hasStudentSeen()
+                    self.filmTableView.reloadData()
+                }
+                }
+        }
+        return videoDownloadHandler
+        
+    }
+    
     // Set the new User Rating
     func adjustBewertung(){
         // get param0 --> VideoID
@@ -131,7 +149,7 @@ class EinKursTableViewController: UITableViewController{
         // get param2 --> Kategorie
         
         for index in 0...(videoDataArray.count - 1) {
-            var video = videoDataArray[index]
+            let video = videoDataArray[index]
             let params = ["gibBewertung",String(video.iD),String(DB.schuelerID),String(5)];
             let request = DB.createRequest(params: params)
             DB.asyncCallforString(request: request, comp: { (bewertung :  (String)) -> () in

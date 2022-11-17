@@ -27,22 +27,22 @@ class ErstelleNeuenSchuelerAccount: UIViewController {
         
     // Password Length Check
         if !isValidEmail(testStr: txtMail.text!) {
-            let alert = UIAlertController(title: "Fehler", message: "Bitte korrekte E-Mail Adresse eingeben!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: "Fehler", message: "Bitte korrekte E-Mail Adresse eingeben!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
         
         if txtPasswort1.text != txtPasswort2.text {
-            let alert = UIAlertController(title: "Fehler", message: "Die Passwörter stimmen nicht überein!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: "Fehler", message: "Die Passwörter stimmen nicht überein!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
         
-        if (txtPasswort1.text?.characters.count)! < 6 {
-            let alert = UIAlertController(title: "Fehler", message: "Das Passwort ist zu kurz!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        if (txtPasswort1.text?.count)! < 6 {
+            let alert = UIAlertController(title: "Fehler", message: "Das Passwort ist zu kurz!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
@@ -72,8 +72,8 @@ class ErstelleNeuenSchuelerAccount: UIViewController {
             
         } else {
             OperationQueue.main.addOperation{
-                let alert = UIAlertController(title: "Fehler", message: "Ein Account mit dieser E-Mail Adresse ist bereits vorhanden", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                let alert = UIAlertController(title: "Fehler", message: "Ein Account mit dieser E-Mail Adresse ist bereits vorhanden", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 return
             }
@@ -92,8 +92,8 @@ class ErstelleNeuenSchuelerAccount: UIViewController {
             DB.asyncCall(requestJSON: "Schueler", request: request, comp: schuelerEingeloggt)
         }else{
             OperationQueue.main.addOperation{
-                let alert = UIAlertController(title: "Fehler", message: "Der Account konnte nicht erstellt werdens", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                let alert = UIAlertController(title: "Fehler", message: "Der Account konnte nicht erstellt werdens", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 return
             }
@@ -109,8 +109,8 @@ class ErstelleNeuenSchuelerAccount: UIViewController {
         print("schuelerEinloggen")
         if(dataJSON.count==0){
             OperationQueue.main.addOperation{
-                let alert = UIAlertController(title: "Fehler", message: "Es konnte kein Account mit diesen Login Daten gefunden werden", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                let alert = UIAlertController(title: "Fehler", message: "Es konnte kein Account mit diesen Login Daten gefunden werden", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 return
             }}else{
@@ -163,6 +163,7 @@ class ErstelleNeuenSchuelerAccount: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
     func md5(string: String) -> String {
         var digestHex : String = ""
         var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
@@ -176,7 +177,6 @@ class ErstelleNeuenSchuelerAccount: UIViewController {
         }
         return digestHex
     }
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

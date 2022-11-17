@@ -30,8 +30,8 @@ class MyCoursesTableViewController: UITableViewController {
         if(dataJSON.count==0){
             print("Keine Kurse vorhanden")
             OperationQueue.main.addOperation{
-                let alert = UIAlertController(title: "Kein Kurs", message: "Du bist in keinem Kurs eingeschrieben. Du kannst dich einschreiben, indem du auf den + Button klickst und anschließend den Freischaltcode eingibst.", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                let alert = UIAlertController(title: "Kein Kurs", message: "Du bist in keinem Kurs eingeschrieben. Du kannst dich einschreiben, indem du auf den + Button klickst und anschließend den Freischaltcode eingibst.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 return
             }

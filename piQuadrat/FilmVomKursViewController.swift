@@ -6,7 +6,7 @@
 //  Copyright © 2017 pau. All rights reserved.
 //
 
-import UIKit
+import AVKit
 
 class FilmVomKursViewController: AVPlayerViewController {
     

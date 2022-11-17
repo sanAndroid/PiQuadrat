@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		20BCE215AB5B4FA07B267D77 /* Pods_piQuadratTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52431A135B251566DD034681 /* Pods_piQuadratTests.framework */; };
+		3FAF5B812925EC39006031B1 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 3FAF5B802925EC39006031B1 /* Pods */; };
+		3FAF5B832925EC6B006031B1 /* Cosmos in Resources */ = {isa = PBXBuildFile; fileRef = 3FAF5B822925EC6B006031B1 /* Cosmos */; };
+		3FAF5B842925EC6B006031B1 /* Cosmos in Resources */ = {isa = PBXBuildFile; fileRef = 3FAF5B822925EC6B006031B1 /* Cosmos */; };
+		3FD79F3B2926B872004A6C72 /* UnderstoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79F3A2926B872004A6C72 /* UnderstoodViewController.swift */; };
+		3FF744752925B8DB00B0B8FC /* InteraktivesVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF744742925B8DB00B0B8FC /* InteraktivesVideoViewController.swift */; };
+		3FF744772925B94200B0B8FC /* FilmVomKursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF744762925B94200B0B8FC /* FilmVomKursViewController.swift */; };
+		3FF7447E2925B94E00B0B8FC /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3FF744782925B94E00B0B8FC /* Base.lproj */; };
+		3FF7447F2925B94E00B0B8FC /* loadVideos.backup in Resources */ = {isa = PBXBuildFile; fileRef = 3FF744792925B94E00B0B8FC /* loadVideos.backup */; };
+		3FF744802925B94E00B0B8FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7447A2925B94E00B0B8FC /* ViewController.swift */; };
+		3FF744822925B94E00B0B8FC /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF7447C2925B94E00B0B8FC /* CourseTableViewCell.swift */; };
+		3FF744832925B94E00B0B8FC /* Info.plist.old in Resources */ = {isa = PBXBuildFile; fileRef = 3FF7447D2925B94E00B0B8FC /* Info.plist.old */; };
 		BF53D595FE0263B696167C78 /* Pods_piQuadrat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717CF4C4DED6BEB7B26DA278 /* Pods_piQuadrat.framework */; };
 		E601E0661FA8EB3D009BBB69 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E601E0651FA8EB3D009BBB69 /* FilmTableViewCell.swift */; };
-		E601E0681FA90A71009BBB69 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E601E0671FA90A70009BBB69 /* CourseTableViewCell.swift */; };
 		E605033B1F38C1D100AE1200 /* MyCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */; };
 		E605033D1F3A100500AE1200 /* EinKursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */; };
 		E614719A1F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */; };
-		E61A4CA41FB2682E007AF356 /* InteraktivesVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61A4CA31FB2682C007AF356 /* InteraktivesVideoViewController.swift */; };
 		E620F35A1F28C2CA00030E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E620F3591F28C2CA00030E04 /* AppDelegate.swift */; };
 		E620F35F1F28C2CB00030E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E620F35D1F28C2CB00030E04 /* Main.storyboard */; };
 		E620F3611F28C2CB00030E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E620F3601F28C2CB00030E04 /* Assets.xcassets */; };
@@ -30,7 +39,6 @@
 		E65449A71F90F1EF0034A8AD /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65449A61F90F1EF0034A8AD /* KeychainConfiguration.swift */; };
 		E65449A91F90F8160034A8AD /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */; };
 		E680C2E81F376D830044AE1E /* Klasse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E680C2E71F376D830044AE1E /* Klasse.swift */; };
-		E6C85D731FB88A34008BDC15 /* UnterstoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C85D721FB88A33008BDC15 /* UnterstoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,15 +53,24 @@
 
 /* Begin PBXFileReference section */
 		377F3C950401168FB209E48B /* Pods-piQuadratTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piQuadratTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-piQuadratTests/Pods-piQuadratTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FAF5B802925EC39006031B1 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		3FAF5B822925EC6B006031B1 /* Cosmos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cosmos; path = Pods/Cosmos/Cosmos; sourceTree = "<group>"; };
+		3FD79F3A2926B872004A6C72 /* UnderstoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderstoodViewController.swift; sourceTree = "<group>"; };
+		3FF744742925B8DB00B0B8FC /* InteraktivesVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteraktivesVideoViewController.swift; sourceTree = "<group>"; };
+		3FF744762925B94200B0B8FC /* FilmVomKursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmVomKursViewController.swift; sourceTree = "<group>"; };
+		3FF744782925B94E00B0B8FC /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		3FF744792925B94E00B0B8FC /* loadVideos.backup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = loadVideos.backup; sourceTree = "<group>"; };
+		3FF7447A2925B94E00B0B8FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FF7447B2925B94E00B0B8FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FF7447C2925B94E00B0B8FC /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		3FF7447D2925B94E00B0B8FC /* Info.plist.old */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist.old; sourceTree = "<group>"; };
 		52431A135B251566DD034681 /* Pods_piQuadratTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_piQuadratTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		717CF4C4DED6BEB7B26DA278 /* Pods_piQuadrat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_piQuadrat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC3BB05501CA4BB988BEBB2 /* Pods-piQuadratTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piQuadratTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-piQuadratTests/Pods-piQuadratTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E601E0651FA8EB3D009BBB69 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
-		E601E0671FA90A70009BBB69 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseTableViewCell.swift; path = /Users/pablinko/Documents/XCode/PiQuadrat/piQuadrat/piQuadrat/CourseTableViewCell.swift; sourceTree = "<absolute>"; };
 		E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoursesTableViewController.swift; sourceTree = "<group>"; };
 		E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EinKursTableViewController.swift; sourceTree = "<group>"; };
 		E61471991F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRegistrationKeyViewController.swift; sourceTree = "<group>"; };
-		E61A4CA31FB2682C007AF356 /* InteraktivesVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InteraktivesVideoViewController.swift; path = /Users/pablinko/Documents/XCode/PiQuadrat/piQuadrat/piQuadrat/InteraktivesVideoViewController.swift; sourceTree = "<absolute>"; };
 		E620F3561F28C2CA00030E04 /* piQuadrat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piQuadrat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E620F3591F28C2CA00030E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E620F35E1F28C2CB00030E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,8 +90,6 @@
 		E65449A61F90F1EF0034A8AD /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
 		E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		E680C2E71F376D830044AE1E /* Klasse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Klasse.swift; sourceTree = "<group>"; };
-		E68DD1911F42188100C4E362 /* PiQuadrat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PiQuadrat-Bridging-Header.h"; sourceTree = "<group>"; };
-		E6C85D721FB88A33008BDC15 /* UnterstoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnterstoodViewController.swift; sourceTree = "<group>"; };
 		E6CCD41E1F3D9A6D00356609 /* piQuadrat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piQuadrat.entitlements; sourceTree = "<group>"; };
 		EF16997DE1B398003EDA25D3 /* Pods-piQuadrat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piQuadrat.release.xcconfig"; path = "Pods/Target Support Files/Pods-piQuadrat/Pods-piQuadrat.release.xcconfig"; sourceTree = "<group>"; };
 		EF864114D31AF46964E8FD35 /* Pods-piQuadrat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piQuadrat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-piQuadrat/Pods-piQuadrat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				717CF4C4DED6BEB7B26DA278 /* Pods_piQuadrat.framework */,
+				3FAF5B822925EC6B006031B1 /* Cosmos */,
+				3FAF5B802925EC39006031B1 /* Pods */,
 				52431A135B251566DD034681 /* Pods_piQuadratTests.framework */,
 			);
 			name = Frameworks;
@@ -143,11 +160,16 @@
 		E620F3581F28C2CA00030E04 /* piQuadrat */ = {
 			isa = PBXGroup;
 			children = (
-				E6C85D721FB88A33008BDC15 /* UnterstoodViewController.swift */,
 				E65449A41F90B1CF0034A8AD /* FeedbackViewController.swift */,
 				E605033C1F3A100500AE1200 /* EinKursTableViewController.swift */,
-				E61A4CA31FB2682C007AF356 /* InteraktivesVideoViewController.swift */,
-				E601E0671FA90A70009BBB69 /* CourseTableViewCell.swift */,
+				3FF744762925B94200B0B8FC /* FilmVomKursViewController.swift */,
+				3FF744742925B8DB00B0B8FC /* InteraktivesVideoViewController.swift */,
+				3FF7447B2925B94E00B0B8FC /* Assets.xcassets */,
+				3FF744782925B94E00B0B8FC /* Base.lproj */,
+				3FF7447C2925B94E00B0B8FC /* CourseTableViewCell.swift */,
+				3FF7447D2925B94E00B0B8FC /* Info.plist.old */,
+				3FF744792925B94E00B0B8FC /* loadVideos.backup */,
+				3FF7447A2925B94E00B0B8FC /* ViewController.swift */,
 				E601E0651FA8EB3D009BBB69 /* FilmTableViewCell.swift */,
 				E605033A1F38C1D100AE1200 /* MyCoursesTableViewController.swift */,
 				E65449A81F90F8150034A8AD /* KeychainPasswordItem.swift */,
@@ -166,7 +188,7 @@
 				E620F3601F28C2CB00030E04 /* Assets.xcassets */,
 				E620F3621F28C2CB00030E04 /* LaunchScreen.storyboard */,
 				E620F3651F28C2CB00030E04 /* Info.plist */,
-				E68DD1911F42188100C4E362 /* PiQuadrat-Bridging-Header.h */,
+				3FD79F3A2926B872004A6C72 /* UnderstoodViewController.swift */,
 			);
 			path = piQuadrat;
 			sourceTree = "<group>";
@@ -192,7 +214,6 @@
 				E620F3531F28C2CA00030E04 /* Frameworks */,
 				E620F3541F28C2CA00030E04 /* Resources */,
 				ADD610131CB4051FC795F40A /* [CP] Embed Pods Frameworks */,
-				EE0B19191085B41573DBD346 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,7 +233,6 @@
 				E620F3671F28C2CC00030E04 /* Frameworks */,
 				E620F3681F28C2CC00030E04 /* Resources */,
 				DF340E2D6994254404A46700 /* [CP] Embed Pods Frameworks */,
-				33542F0C5A74FF65D56483E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +251,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = pau;
 				TargetAttributes = {
 					E620F3551F28C2CA00030E04 = {
@@ -254,7 +274,7 @@
 			};
 			buildConfigurationList = E620F3511F28C2CA00030E04 /* Build configuration list for PBXProject "piQuadrat" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -277,7 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E620F3641F28C2CB00030E04 /* LaunchScreen.storyboard in Resources */,
+				3FF744832925B94E00B0B8FC /* Info.plist.old in Resources */,
+				3FAF5B812925EC39006031B1 /* Pods in Resources */,
+				3FAF5B832925EC6B006031B1 /* Cosmos in Resources */,
+				3FF7447F2925B94E00B0B8FC /* loadVideos.backup in Resources */,
 				E620F3611F28C2CB00030E04 /* Assets.xcassets in Resources */,
+				3FF7447E2925B94E00B0B8FC /* Base.lproj in Resources */,
 				E620F35F1F28C2CB00030E04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,40 +311,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAF5B842925EC6B006031B1 /* Cosmos in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33542F0C5A74FF65D56483E2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-piQuadratTests/Pods-piQuadratTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4BEB2FE1CDAFBFB87F204596 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-piQuadratTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ADD610131CB4051FC795F40A /* [CP] Embed Pods Frameworks */ = {
@@ -328,13 +342,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-piQuadrat/Pods-piQuadrat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-piQuadrat/Pods-piQuadrat-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-piQuadrat/Pods-piQuadrat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D76D180063E69B850452BAC1 /* [CP] Check Pods Manifest.lock */ = {
@@ -343,13 +360,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-piQuadrat-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF340E2D6994254404A46700 /* [CP] Embed Pods Frameworks */ = {
@@ -358,28 +378,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-piQuadratTests/Pods-piQuadratTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-piQuadratTests/Pods-piQuadratTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE0B19191085B41573DBD346 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-piQuadrat/Pods-piQuadrat-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-piQuadratTests/Pods-piQuadratTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -394,19 +402,21 @@
 				E680C2E81F376D830044AE1E /* Klasse.swift in Sources */,
 				E605033B1F38C1D100AE1200 /* MyCoursesTableViewController.swift in Sources */,
 				E620F3821F2A166B00030E04 /* JsonDB.swift in Sources */,
-				E61A4CA41FB2682E007AF356 /* InteraktivesVideoViewController.swift in Sources */,
 				E65449A91F90F8160034A8AD /* KeychainPasswordItem.swift in Sources */,
 				E620F35A1F28C2CA00030E04 /* AppDelegate.swift in Sources */,
 				E6269A7E1F323E980098E446 /* classListViewController.swift in Sources */,
-				E601E0681FA90A71009BBB69 /* CourseTableViewCell.swift in Sources */,
+				3FF744752925B8DB00B0B8FC /* InteraktivesVideoViewController.swift in Sources */,
+				3FF744802925B94E00B0B8FC /* ViewController.swift in Sources */,
 				E614719A1F3CAD97000ABD65 /* EnterRegistrationKeyViewController.swift in Sources */,
 				E601E0661FA8EB3D009BBB69 /* FilmTableViewCell.swift in Sources */,
+				3FD79F3B2926B872004A6C72 /* UnderstoodViewController.swift in Sources */,
 				E620F37A1F28C4CC00030E04 /* LoginScreen.swift in Sources */,
-				E6C85D731FB88A34008BDC15 /* UnterstoodViewController.swift in Sources */,
+				3FF744772925B94200B0B8FC /* FilmVomKursViewController.swift in Sources */,
 				E65449A71F90F1EF0034A8AD /* KeychainConfiguration.swift in Sources */,
 				E65449A51F90B1CF0034A8AD /* FeedbackViewController.swift in Sources */,
 				E620F3801F2A108100030E04 /* DB.swift in Sources */,
 				E620F37C1F2A044D00030E04 /* gewaehltesThemaViewController.swift in Sources */,
+				3FF744822925B94E00B0B8FC /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +463,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -463,6 +474,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -470,8 +482,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -496,13 +510,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -512,6 +526,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -522,6 +537,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -529,8 +545,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -549,12 +567,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -568,16 +586,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = piQuadrat/piQuadrat.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 25W52HY24B;
 				INFOPLIST_FILE = piQuadrat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.com.PiQuadrat.piQuadrat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/pablinko/Documents/XCode/PiQuadrat/piQuadrat/piQuadrat/PiQuadrat-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -590,16 +609,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = piQuadrat/piQuadrat.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 25W52HY24B;
 				INFOPLIST_FILE = piQuadrat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.com.PiQuadrat.piQuadrat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/pablinko/Documents/XCode/PiQuadrat/piQuadrat/piQuadrat/PiQuadrat-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -615,7 +635,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PiQuadrat.piQuadratTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/piQuadrat.app/piQuadrat";
 			};
 			name = Debug;
@@ -631,7 +651,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PiQuadrat.piQuadratTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/piQuadrat.app/piQuadrat";
 			};
 			name = Release;

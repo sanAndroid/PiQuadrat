@@ -43,8 +43,8 @@ class EnterRegistrationKeyViewController: UIViewController {
             
             
         }else{
-            let alert = UIAlertController(title: "Fehler", message: "Es konnte kein Kurs mit diesem Einschreibeschlüssel gefunden werden", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                let alert = UIAlertController(title: "Fehler", message: "Es konnte kein Kurs mit diesem Einschreibeschlüssel gefunden werden", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }

@@ -7,6 +7,7 @@
 //
 //  LoginScreen, manages login and credentials etc.
 import UIKit
+    import CryptoKit
 
 class LoginScreen: UIViewController {
     @IBOutlet weak var pwd: UITextField!
@@ -110,8 +111,8 @@ class LoginScreen: UIViewController {
      print("schuelerEinloggen")
      if(dataJSON.count==0){
         OperationQueue.main.addOperation{
-            let alert = UIAlertController(title: "Fehler", message: "Es konnte kein Account mit diesen Login Daten gefunden werden", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: "Fehler", message: "Es konnte kein Account mit diesen Login Daten gefunden werden", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
     }
@@ -180,17 +181,8 @@ class LoginScreen: UIViewController {
 
 
 func md5(string: String) -> String {
-    var digestHex : String = ""
-    var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-    if let data = string.data(using: String.Encoding.utf8) {
-        data.withUnsafeBytes { dataBytes in
-            CC_MD5(dataBytes, CC_LONG(data.count), &digest)
-        }
-    for index in 0..<Int(CC_MD5_DIGEST_LENGTH) {
-        digestHex += String(format: "%02x", digest[index])
-        }
-    }
-    return digestHex
+    let computed = Insecure.MD5.hash(data: string.data(using: .utf8)!)
+    return computed.map { String(format: "%02hhx", $0) }.joined()
 }
 
 

@@ -1,32 +1,16 @@
 PODS:
-  - Cosmos (11.0.3)
-  - Firebase/Core (4.0.3):
-    - FirebaseAnalytics (= 4.0.2)
-    - FirebaseCore (= 4.0.3)
-  - FirebaseAnalytics (4.0.2):
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (4.0.3):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseInstanceID (2.0.0):
-    - FirebaseCore (~> 4.0)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - Cosmos (23.0.0)
 
 DEPENDENCIES:
-  - Cosmos (~> 11.0.3)
-  - Firebase/Core
+  - Cosmos (~> 23.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
 
 SPEC CHECKSUMS:
-  Cosmos: eb506859929f4add2d2aec822a27efb2f718a95d
-  Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
-  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
-  FirebaseCore: c709067051de07bdaffdc4e735cd7299a23c463a
-  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
 
-PODFILE CHECKSUM: 59a001ea1083e373120995c9ce1bcac947c119be
+PODFILE CHECKSUM: bc14ed1467f70868bf3afb40a06edf9adb5d3974
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.11.3

@@ -10,7 +10,6 @@ import WebKit
 import AVKit
 import AVFoundation
 
-
 class InteraktivesVideoViewController: UIViewController,  WKUIDelegate, WKNavigationDelegate {
 
     var videoWebView: WKWebView!
@@ -31,9 +30,9 @@ class InteraktivesVideoViewController: UIViewController,  WKUIDelegate, WKNaviga
         let session = AVAudioSession.sharedInstance()
         do {
             // Configure the audio session for movie playback
-            try session.setCategory(AVAudioSessionCategoryPlayback,
-                                    mode: AVAudioSessionModeMoviePlayback,
-                                    options: [])
+            try session.setCategory(AVAudioSession.Category.playback,
+                                        mode: AVAudioSession.Mode.moviePlayback,
+                                        options: [])
         } catch let error as NSError {
             print("Failed to set the audio session category and mode: \(error.localizedDescription)")
         }
